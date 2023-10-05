@@ -1,13 +1,11 @@
 //your JS code here. If required.
-document.addEventListener('DOMContentLoaded', () => {
-  const line = document.getElementById('line');
-  let rotation = 0;
+var line = document.getElementById("line");
+		var angle = 0;
 
-  function rotateLine() {
-    rotation += 1;
-    line.style.transform = 'rotate(${rotation}deg)';
-    requestAnimationFrame(rotateLine);
-  }
+		function rotateLine() {
+			angle += 5;
+			line.style.transform = "rotate(" + angle + "deg)";
+			window.requestAnimationFrame(rotateLine);
+		}
 
-  rotateLine();
-});
+		window.requestAnimationFrame(rotateLine);
